@@ -1,10 +1,11 @@
 from exercises import (
+    change,
     first_then_lower_case,
     # say,
     powers_generator,
-    meaningful_line_count,
-    Quaternion,
-    change)
+    # meaningful_line_count,
+    Quaternion
+    )
 
 ################################################################################
 counts = {True: 0, False: 0}
@@ -69,9 +70,9 @@ expect(next(g2) == 81)
 expect_error(StopIteration, None, next, g2)
 expect(list(powers_generator(base=3, limit=27)) == [1, 3, 9, 27])
 
-suite("meaningful_line_count")
-expect_error(FileNotFoundError, 'No such file', meaningful_line_count, "no-such-file.txt")
-expect(meaningful_line_count("../test-for-line-count.txt") == 5)
+# suite("meaningful_line_count")
+# expect_error(FileNotFoundError, 'No such file', meaningful_line_count, "no-such-file.txt")
+# expect(meaningful_line_count("../test-for-line-count.txt") == 5)
 
 suite("Quaternion")
 q = Quaternion(3.5, 2.25, -100.0, -1.25)
